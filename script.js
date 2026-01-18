@@ -238,8 +238,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
-    // Photo item click handlers
-    const photoItems = document.querySelectorAll('.photo-item[data-project-images]');
+    // Photo item click handlers (gallery and projets section)
+    const photoItems = document.querySelectorAll('.photo-item[data-project-images], .projet-item[data-project-images]');
     photoItems.forEach(item => {
         item.style.cursor = 'pointer';
         item.addEventListener('click', () => {
