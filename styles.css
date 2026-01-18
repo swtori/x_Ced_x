@@ -54,7 +54,12 @@ body {
     gap: var(--gap-medium);
 }
 
-.projets-btn {
+.header-nav {
+    display: flex;
+    gap: var(--gap-small);
+}
+
+.header-nav-btn {
     padding: 8px 16px;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -68,7 +73,7 @@ body {
     font-family: var(--font-primary);
 }
 
-.projets-btn:hover {
+.header-nav-btn:hover {
     background: rgba(255, 255, 255, 0.1);
     border-color: var(--color-accent);
     color: var(--color-accent);
@@ -183,6 +188,78 @@ body {
 
 .photo-item:hover img {
     transform: scale(1.05);
+}
+
+/* ===== CONTACT MODAL ===== */
+.contact-modal-content {
+    max-width: 500px;
+    padding: var(--gap-large);
+}
+
+.contact-container {
+    text-align: center;
+}
+
+.contact-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    font-family: var(--font-minecraft);
+    color: var(--color-text-primary);
+    margin-bottom: var(--gap-large);
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, var(--color-accent) 0%, #ffffff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-medium);
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-small);
+    padding: var(--gap-medium);
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--color-accent);
+}
+
+.contact-label {
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    color: var(--color-text-secondary);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contact-value {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: var(--color-text-primary);
+    font-weight: 500;
+}
+
+.contact-link {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: var(--color-accent);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #ffffff;
+    text-decoration: underline;
 }
 
 /* ===== MODAL ===== */

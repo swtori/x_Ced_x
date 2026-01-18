@@ -14,7 +14,10 @@
     <!-- Header -->
     <header class="main-header">
         <div class="header-top">
-            <a href="#projets" class="projets-btn" data-i18n="projetsTitle">Projets</a>
+            <div class="header-nav">
+                <a href="#projets" class="header-nav-btn" data-i18n="projetsTitle">Projets</a>
+                <button class="header-nav-btn" id="contactBtn" data-i18n="contactTitle">Contact</button>
+            </div>
             <div class="lang-selector">
                 <button class="lang-btn active" data-lang="fr" aria-label="Français">FR</button>
                 <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
@@ -125,6 +128,27 @@
             </div>
         </div>
     </section>
+
+    <!-- Contact Modal -->
+    <div class="modal" id="contactModal">
+        <div class="modal-overlay" id="contactModalOverlay"></div>
+        <div class="modal-content contact-modal-content">
+            <button class="modal-close" id="contactModalClose" data-i18n-aria="modalClose" aria-label="Fermer">×</button>
+            <div class="contact-container">
+                <h2 class="contact-title" data-i18n="contactTitle">Contact</h2>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-label" data-i18n="discordLabel">Discord</span>
+                        <span class="contact-value">x_ced_x</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label" data-i18n="patreonLabel">Patreon</span>
+                        <a href="https://patreon.com/XCedX" target="_blank" rel="noopener noreferrer" class="contact-link">patreon.com/XCedX</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Project Modal -->
     <div class="modal" id="projectModal">
