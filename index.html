@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="x_Ced_x - Professional Minecraft Builder. Créateur de mondes immersifs, de builds sur mesure et de maps exceptionnelles.">
+    <title>x_Ced_x | Professional Minecraft Builder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@300;400;500;600;700&display=block" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="lang-selector">
+            <button class="lang-btn active" data-lang="fr" aria-label="Français">FR</button>
+            <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+            <button class="lang-btn" data-lang="de" aria-label="Deutsch">DE</button>
+        </div>
+        <h1 class="main-title">x_Ced_x</h1>
+        <h2 class="main-subtitle" data-i18n="subtitle">Professional Minecraft Builder</h2>
+    </header>
+
+    <!-- Gallery Section -->
+    <main class="gallery">
+        <!-- Grande photo - Row 1 (Steampunk Render) -->
+        <div class="photo-row full">
+            <div class="photo-item" 
+                 data-project="steampunk"
+                 data-project-images='["img/steampunk_Sanctuary/steampunk_Sanctuary_rendered.png","img/steampunk_Sanctuary/steampunk_Sanctuary_1.png","img/steampunk_Sanctuary/steampunk_Sanctuary_2.png","img/steampunk_Sanctuary/steampunk_Sanctuary_3.png","img/steampunk_Sanctuary/steampunk_Sanctuary_4.png","img/steampunk_Sanctuary/steampunk_Sanctuary_5.png","img/steampunk_Sanctuary/steampunk_Sanctuary_6.png","img/steampunk_Sanctuary/steampunk_Sanctuary_7.png","img/steampunk_Sanctuary/steampunk_Sanctuary_8.png","img/steampunk_Sanctuary/steampunk_Sanctuary_9.png","img/steampunk_Sanctuary/steampunk_Sanctuary_10.png"]'>
+                <img src="img/steampunk_Sanctuary/steampunk_Sanctuary_rendered.png" alt="Steampunk Sanctuary">
+            </div>
+        </div>
+
+        <!-- Grande photo - Row 2 (Utopia Render) -->
+        <div class="photo-row full">
+            <div class="photo-item" 
+                 data-project="utopia"
+                 data-project-images='["img/utopia/utopia_rendered.png","img/utopia/utopia_1.png","img/utopia/utopia_2.png","img/utopia/utopia_3.png","img/utopia/utopia_4.png"]'>
+                <img src="img/utopia/utopia_rendered.png" alt="Utopia">
+            </div>
+        </div>
+
+        <!-- Double photos - Row 1 -->
+        <div class="photo-row double">
+            <div class="photo-item" 
+                 data-project="1950s"
+                 data-project-images='["img/1950s_Street/1950s_Street_from_left.png","img/1950s_Street/1950s_Street_from_right.png","img/1950s_Street/1950s_Street_from_left_back.png","img/1950s_Street/1950s_Street_train.png"]'>
+                <img src="img/1950s_Street/1950s_Street_from_left.png" alt="1950s Street">
+            </div>
+            <div class="photo-item" 
+                 data-project="japan"
+                 data-project-images='["img/japan/japan.png"]'>
+                <img src="img/japan/japan.png" alt="Japan">
+            </div>
+        </div>
+
+        <!-- Grande photo - Row 3 -->
+        <div class="photo-row full">
+            <div class="photo-item" 
+                 data-project="medieval"
+                 data-project-images='["img/medieval/medieval_1.png","img/medieval/medieval_2.png"]'>
+                <img src="img/medieval/medieval_1.png" alt="Medieval">
+            </div>
+        </div>
+
+    </main>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <h2 class="about-title" data-i18n="aboutTitle">À propos</h2>
+            <div class="about-content">
+                <p class="about-text" data-i18n="aboutText1">
+                    Je m'appelle Cédric, mais appellez-moi Ced. Minecraft fait partie de mon quotidien depuis très longtemps : j'ai commencé à build autour de la sortie de la 1.9, et très vite, la construction est devenue la raison principale pour laquelle je jouais au jeu. Builder n'a jamais été un simple passe-temps pour moi, c'est ce qui m'a fait rester sur Minecraft pendant presque 9 à 10 ans.
+                </p>
+                <p class="about-text" data-i18n="aboutText2">
+                    Au fil du temps, j'ai développé une vraie sensibilité artistique, nourrie aussi par mes autres centres d'intérêt : le dessin, la collection, les mangas et bien sûr le gaming. Tout cela influence ma manière de concevoir un build, que ce soit dans les formes, les ambiances ou les détails.
+                </p>
+                <p class="about-text" data-i18n="aboutText3">
+                    Je vise constamment l'excellence dans mes constructions, avec une attention particulière portée à la cohérence architecturale, aux volumes et aux finitions. Le détail est pour moi essentiel : chaque élément a une raison d'exister, afin de créer des bâtiments solides, lisibles et visuellement impactants, même à grande échelle.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modal -->
+    <div class="modal" id="projectModal">
+        <div class="modal-overlay" id="modalOverlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose" data-i18n-aria="modalClose" aria-label="Fermer">×</button>
+            
+            <div class="modal-gallery">
+                <div class="modal-main-image" id="modalMainImage">
+                    <img id="modalCurrentImage" src="" alt="">
+                    <button class="modal-nav modal-nav-prev" id="modalPrev" data-i18n-aria="modalPrev" aria-label="Image précédente">‹</button>
+                    <button class="modal-nav modal-nav-next" id="modalNext" data-i18n-aria="modalNext" aria-label="Image suivante">›</button>
+                    <div class="modal-image-counter" id="modalImageCounter"></div>
+                </div>
+                
+                <div class="modal-thumbnails" id="modalThumbnails"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#" class="footer-link" data-i18n="cgu">Conditions Générales d'Utilisation (CGU)</a>
+                <a href="#" class="footer-link" data-i18n="cgv">Conditions Générales de Vente (CGV)</a>
+            </div>
+            <div class="footer-copyright">
+                <p data-i18n="copyright">&copy; 2024 x_Ced_x – Minecraft Builder. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
