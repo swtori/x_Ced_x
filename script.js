@@ -247,40 +247,5 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
-    // Contact modal handlers
-    const contactBtn = document.getElementById('contactBtn');
-    const contactModal = document.getElementById('contactModal');
-    const contactModalOverlay = document.getElementById('contactModalOverlay');
-    const contactModalClose = document.getElementById('contactModalClose');
-    
-    if (contactBtn && contactModal) {
-        contactBtn.addEventListener('click', () => {
-            contactModal.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        });
-        
-        if (contactModalOverlay) {
-            contactModalOverlay.addEventListener('click', () => {
-                contactModal.classList.remove('active');
-                document.body.style.overflow = '';
-            });
-        }
-        
-        if (contactModalClose) {
-            contactModalClose.addEventListener('click', () => {
-                contactModal.classList.remove('active');
-                document.body.style.overflow = '';
-            });
-        }
-        
-        // Close on Escape key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && contactModal.classList.contains('active')) {
-                contactModal.classList.remove('active');
-                document.body.style.overflow = '';
-            }
-        });
-    }
-    
     console.log('x_Ced_x Portfolio loaded');
 });
